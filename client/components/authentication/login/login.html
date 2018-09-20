@@ -1,0 +1,15 @@
+<template name="AuthenticationLogin">
+	{{#Form name='AuthenticationLogin' redirect=redirect action='users.login'}}
+		<div class="form-control">
+			<label>Email</label>
+			<input class="input" type="email" name="email" required>
+		</div>
+		<div class="form-control">
+			<label>Пароль</label>
+			<input class="input" type="password" name="password" required>
+		</div>
+		<div class="form-action">
+			<button class="button" type="submit">Войти</button>
+		</div>
+	{{/Form}}
+</template>

@@ -1,0 +1,15 @@
+<template name="/welcome/tutor/step/resume">
+	{{#Form action='users.setTutorProfileSection' redirect='/welcome/tutor/step/review'}}
+		<div class="form-control">
+			<label>Образование</label>
+			<input class="input" type="text" name="resume[education]">
+		</div>
+		<div class="form-control">
+			<label>Ссылка на диплом</label>
+			<input class="input" type="text" name="resume[education_link]">
+		</div>
+		<div class="form-action">
+			<button class="button" type="submit">Отправить заявку</button>
+		</div>
+	{{/Form}}
+</template>

@@ -1,0 +1,27 @@
+<template name="/">
+
+	{{>EventsPub}}
+	{{>EventsSub}}
+
+	<div class="content">
+		<h1>Test Header 1</h1>
+		<h2>Test Header 2</h2>
+		<h3>Test Header 3</h3>
+		<h4>Test Header 4</h4>
+		<h5>Test Header 5</h5>
+		<p>asd</p>
+		{{#Form name='Test' method='test'}}
+			<div class="form-control">
+				<label>title</label>
+				<input class="input" type="text" name="title">
+			</div>
+			<div class="form-action">
+				<button class="button">save</button>
+			</div>
+		{{/Form}}
+		{{>AuthenticationLogin redirect='/welcome/router'}}
+		{{>AuthenticationRegistration}}
+
+	</div>
+</template>
+

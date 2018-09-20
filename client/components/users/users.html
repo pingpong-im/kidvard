@@ -1,0 +1,7 @@
+<template name="Users">
+	{{#each user in users}}
+		<div>
+			<a href="/admin/users/view/{{user._id}}">{{user.title}}</a>
+		</div>
+	{{/each}}
+</template>

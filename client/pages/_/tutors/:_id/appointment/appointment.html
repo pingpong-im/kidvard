@@ -1,0 +1,12 @@
+<template name="/tutors/:_id/appointment">
+	{{#unless appointment}}
+		{{#Form action='appointments.insert' before=beforeSubmit}}
+			<input type="text" name="_tutorUser" value="{{routerParam '_id'}}">
+			<div>
+				<button type="submit">назначить занятие</button>
+			</div>
+		{{/Form}}
+	{{else}}
+		<a href="/tutors/{{routerParam '_id'}}/appointment/{{appointment._id}}">перейти к встрече</a>
+	{{/unless}}
+</template>

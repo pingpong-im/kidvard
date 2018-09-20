@@ -1,0 +1,20 @@
+<template name="Chat">
+	<div class="chat">
+		<div class="chat-messages">
+			<div>
+				{{#each message in messages}}
+					<div>
+						{{message.text}}
+					</div>
+				{{/each}}
+			</div>
+		</div>
+		<div class="chat-tools">tools</div>
+		<div class="chat-input">
+			{{#Form action='messages.insert' before=beforeSubmit after=afterSubmit}}
+				<textarea name="text" placeholder="Текст сообщения"></textarea>
+				<button type="submit">send</button>
+			{{/Form}}
+		</div>
+	</div>
+</template>

@@ -1,0 +1,15 @@
+<template name="/welcome/tutor/step/general">
+	{{#Form action='users.setTutorProfileSection' redirect='/welcome/tutor/step/resume'}}
+		<div class="form-control">
+			<label>Полное Имя</label>
+			<input class="input" type="text" name="general[name]">
+		</div>
+		<div class="form-control">
+			<label>Скайп</label>
+			<input class="input" type="text" name="general[social_skype]">
+		</div>
+		<div class="form-action">
+			<button class="button" type="submit">Далее</button>
+		</div>
+	{{/Form}}
+</template>

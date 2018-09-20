@@ -1,0 +1,7 @@
+<template name="/tutors">
+	{{#each user in getUsersTutors}}
+		<a href="/tutors/{{user._id}}">
+			<div>user: {{user.title}}</div>
+		</a>
+	{{/each}}
+</template>

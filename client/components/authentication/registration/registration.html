@@ -1,0 +1,19 @@
+<template name="AuthenticationRegistration">
+	{{#Form name='AuthenticationRegistration'}}
+		<div class="form-control">
+			<label>Ваше Имя</label>
+			<input class="input" type="text" name="profile[name]" required>
+		</div>
+		<div class="form-control">
+			<label>Email</label>
+			<input class="input" type="email" name="email" required>
+		</div>
+		<div class="form-control">
+			<label>Пароль</label>
+			<input class="input" type="password" name="password" required>
+		</div>
+		<div class="form-action">
+			<button class="button" type="submit">Зарегистрироваться</button>
+		</div>
+	{{/Form}}
+</template>

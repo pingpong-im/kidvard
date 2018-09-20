@@ -1,0 +1,7 @@
+<template name="/tutors/:_id/chat">
+	{{#unless chat}}
+		<button class="js-start-chat" type="submit">начать чат</button>
+	{{else}}
+		<a href="/tutors/{{routerParam '_id'}}/chat/{{chat._id}}">перейти в чат</a>
+	{{/unless}}
+</template>

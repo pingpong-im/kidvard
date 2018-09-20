@@ -1,0 +1,68 @@
+<head>
+	<title>kidvard</title>
+</head>
+<template name="LayoutDefault">
+	<div class="layout">
+		<div class="layout-header layout-header--notification">назначение встречь</div>
+		<div class="layout-header">
+			<div class="container padding-tb">
+				<div class="header">
+					<div class="header-item header-item--brand">
+						<h1><a href="/">kidvard</a></h1>
+					</div>
+					<div class="header-item"></div>
+					<div class="header-item">
+						<div class="nav-horizontal">
+							<a href="/tutors">Специалисты</a>
+							<a href="/welcome/tutor/step/registration">Стать специалистом</a>
+							<a href="/welcome/consumer">Стать зазказчиком</a>
+							{{#if currentUser}}
+								<a href="/account">{{currentUser.emails.[0].address}}</a>
+							{{else}}
+								<a href="/auth">Войти</a>
+							{{/if}}
+							<a href="/admin">Админ</a>
+						</div>
+					</div>
+				</div>
+				<div class="flex-row">
+					<div class="flex-item">Заказчик</div>
+					<div class="flex-item"></div>
+					<div class="flex-item">
+						<nav class="nav-horizontal">
+							<a href="/account/consumer">Профиль</a>
+							<a href="/account/consumer/appointments">Мои занятия ({{currentUser.appointments.count}})</a>
+							<a href="/account/consumer/chats">Мои чаты ({{currentUser.chats.count}})</a>
+						</nav>
+					</div>
+				</div>
+
+				<hr>
+
+				<div class="flex-row">
+					<div class="flex-item">Исполнитель</div>
+					<div class="flex-item"></div>
+					<div class="flex-item">
+						<nav class="nav-horizontal">
+							<a href="/account/tutor/profile/genereal">Профиль</a>
+							<a href="/account/tutor/profile/resume">Резюме</a>
+							<a href="/account/tutor/profile/schedule">Расписание</a>
+							<a href="/account/tutor/appointments">Мои занятия ({{currentUser.appointments.count}})</a>
+							<a href="/account/tutor/chats">Мои чаты ({{currentUser.chats.count}})</a>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="layout-main">
+			<div class="container">
+				{{>Template.dynamic template=page}}
+			</div>
+		</div>
+		<div class="layout-footer">
+			<div class="container padding-tb">
+				kidvard
+			</div>
+		</div>
+	</div>
+</template>

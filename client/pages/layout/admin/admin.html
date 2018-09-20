@@ -1,0 +1,20 @@
+<template name="LayoutAdmin">
+	<div class="container">
+		<div class="flex-row">
+			<div class="flex-item">
+				<h1>kidvard - backoffice</h1>
+			</div>
+		</div>
+		<div class="flex-row">
+			<div class="flex-item">
+				<div class="nav-horizontal">
+					<a class="nav-active" href="/admin/users/all">Все пользователи</a>
+					<a href="/admin/users/tutors">Только Преподаватели</a>
+				</div>
+			</div>
+			<div class="flex-item"></div>
+		</div>
+		<br>
+		{{>Template.dynamic template=page}}
+	</div>
+</template>
